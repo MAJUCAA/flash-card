@@ -10,92 +10,7 @@
     <header>
         <h1>FlashCard - 2ºA 2024</h1>
     </header>
-<!-- código omitido -->
-
-<main>
-    <section id="container">
-        <article class="cartao">
-
-<!-- código omitido -->
-
-            <article class="cartao">
-                <div class="cartao__conteudo">
-                    <h3>Conhecimentos Gerais</h3>
-                    <div class="cartao__conteudo__pergunta">
-                        Qual a capital da França?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        Paris.
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cartao">
-                <div class="cartao__conteudo">
-                    <h3>Conhecimentos Gerais</h3>
-                    <div class="cartao__conteudo__pergunta">
-                        Qual é o maior planeta do nosso sistema solar?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        Júpiter.
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cartao"></article>
-                <div class="cartao__conteudo">
-                    <h3>Conhecimentos Gerais</h3>
-                    <div class="cartao__conteudo__pergunta">
-                        Em que ano ocorreu a Independência do Brasil?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        Em 1822.
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cartao"></article>
-                <div class="cartao__conteudo">
-                    <h3>Conhecimentos Gerais</h3>
-                    <div class="cartao__conteudo__pergunta">
-                        Quem escreveu a obra "Dom Quixote"?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        Miguel de Cervantes.
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cartao"></article>
-                <div class="cartao__conteudo">
-                    <h3>Conhecimentos Gerais</h3>
-                    <div class="cartao__conteudo__pergunta">
-                        Qual é o símbolo químico da água?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        H2O.
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cartao"></article>
-                <div class="cartao__conteudo">
-                    <h3>Conhecimentos Gerais</h3>
-                    <div class="cartao__conteudo__pergunta">
-                        Qual animal é conhecido como "rei da selva"?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        Leão.
-                    </div>
-                </div>
-            </article>
-        </section>
-    </main>
+<
     <footer>
         <p>Projeto desenvolvido nas aulas de Programação II, sem fins lucrativos</p>
     </footer>
@@ -177,6 +92,441 @@
             <!-- Lado de trás do cartão -->
             <div class="card-face card-back">
                Paris.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para fazer o flip do cartão ao clicar
+        const card = document.getElementById("flashCard");
+
+        card.addEventListener("click", () => {
+            card.classList.toggle("is-flipped");
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Card Interativo</title>
+    <style>
+        /* Estilos principais para centralizar o cartão */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Container do cartão */
+        .card-container {
+            perspective: 1000px;
+        }
+
+        /* Configuração de estilo do cartão com efeito de flip */
+        .card {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+        /* Lado da frente e trás do cartão */
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .card-front {
+            background-color: #4CAF50;
+        }
+
+        .card-back {
+            background-color: #ff5722;
+            transform: rotateY(180deg);
+        }
+
+        /* Quando o cartão está virado */
+        .card.is-flipped {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Container do cartão -->
+    <div class="card-container">
+        <div class="card" id="flashCard">
+            <!-- Lado da frente do cartão -->
+            <div class="card-face card-front">
+                Qual animal é conhecido como "rei da selva"?
+            </div>
+            <!-- Lado de trás do cartão -->
+            <div class="card-face card-back">
+                Leão.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para fazer o flip do cartão ao clicar
+        const card = document.getElementById("flashCard");
+
+        card.addEventListener("click", () => {
+            card.classList.toggle("is-flipped");
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Card Interativo</title>
+    <style>
+        /* Estilos principais para centralizar o cartão */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Container do cartão */
+        .card-container {
+            perspective: 1000px;
+        }
+
+        /* Configuração de estilo do cartão com efeito de flip */
+        .card {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+        /* Lado da frente e trás do cartão */
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .card-front {
+            background-color: #4CAF50;
+        }
+
+        .card-back {
+            background-color: #ff5722;
+            transform: rotateY(180deg);
+        }
+
+        /* Quando o cartão está virado */
+        .card.is-flipped {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Container do cartão -->
+    <div class="card-container">
+        <div class="card" id="flashCard">
+            <!-- Lado da frente do cartão -->
+            <div class="card-face card-front">
+                Qual o símbolo químico da água?
+            </div>
+            <!-- Lado de trás do cartão -->
+            <div class="card-face card-back">
+                H2O.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para fazer o flip do cartão ao clicar
+        const card = document.getElementById("flashCard");
+
+        card.addEventListener("click", () => {
+            card.classList.toggle("is-flipped");
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Card Interativo</title>
+    <style>
+        /* Estilos principais para centralizar o cartão */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Container do cartão */
+        .card-container {
+            perspective: 1000px;
+        }
+
+        /* Configuração de estilo do cartão com efeito de flip */
+        .card {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+        /* Lado da frente e trás do cartão */
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .card-front {
+            background-color: #4CAF50;
+        }
+
+        .card-back {
+            background-color: #ff5722;
+            transform: rotateY(180deg);
+        }
+
+        /* Quando o cartão está virado */
+        .card.is-flipped {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Container do cartão -->
+    <div class="card-container">
+        <div class="card" id="flashCard">
+            <!-- Lado da frente do cartão -->
+            <div class="card-face card-front">
+                Quem escreveu a obra "Dom Quixote"?
+            </div>
+            <!-- Lado de trás do cartão -->
+            <div class="card-face card-back">
+                Miguel de Cervantes.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para fazer o flip do cartão ao clicar
+        const card = document.getElementById("flashCard");
+
+        card.addEventListener("click", () => {
+            card.classList.toggle("is-flipped");
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Card Interativo</title>
+    <style>
+        /* Estilos principais para centralizar o cartão */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Container do cartão */
+        .card-container {
+            perspective: 1000px;
+        }
+
+        /* Configuração de estilo do cartão com efeito de flip */
+        .card {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+        /* Lado da frente e trás do cartão */
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .card-front {
+            background-color: #4CAF50;
+        }
+
+        .card-back {
+            background-color: #ff5722;
+            transform: rotateY(180deg);
+        }
+
+        /* Quando o cartão está virado */
+        .card.is-flipped {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Container do cartão -->
+    <div class="card-container">
+        <div class="card" id="flashCard">
+            <!-- Lado da frente do cartão -->
+            <div class="card-face card-front">
+                Em que ano ocorreu a Independência do Brasil?
+            </div>
+            <!-- Lado de trás do cartão -->
+            <div class="card-face card-back">
+                1822.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para fazer o flip do cartão ao clicar
+        const card = document.getElementById("flashCard");
+
+        card.addEventListener("click", () => {
+            card.classList.toggle("is-flipped");
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Card Interativo</title>
+    <style>
+        /* Estilos principais para centralizar o cartão */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Container do cartão */
+        .card-container {
+            perspective: 1000px;
+        }
+
+        /* Configuração de estilo do cartão com efeito de flip */
+        .card {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+        /* Lado da frente e trás do cartão */
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .card-front {
+            background-color: #4CAF50;
+        }
+
+        .card-back {
+            background-color: #ff5722;
+            transform: rotateY(180deg);
+        }
+
+        /* Quando o cartão está virado */
+        .card.is-flipped {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Container do cartão -->
+    <div class="card-container">
+        <div class="card" id="flashCard">
+            <!-- Lado da frente do cartão -->
+            <div class="card-face card-front">
+                Qual o maior planeta do sistema solar?
+            </div>
+            <!-- Lado de trás do cartão -->
+            <div class="card-face card-back">
+                Júpiter.
             </div>
         </div>
     </div>
